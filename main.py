@@ -11,7 +11,7 @@ if __name__ == "__main__":
         file.write(rss_feed.decode('utf-8'))
 
     try:
-        subprocess.run(["git", "add", "emails"], check=True)
+        subprocess.run(["git", "add", "emails.rss"], check=True)
         subprocess.run(["git", "commit", "-m", "Update emails.rss"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("emails.rss file has been updated and pushed to Github")
