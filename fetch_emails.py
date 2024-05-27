@@ -26,7 +26,7 @@ def get_emails():
     sales_ref = db.collection("Sales")
     docs = sales_ref.get()
     for doc in docs:
-        emails.append(doc.to_dict()['firstName'])
+        emails.append(doc.to_dict()['email'])
     
     return emails
 
